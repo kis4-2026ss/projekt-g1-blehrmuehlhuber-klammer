@@ -13,7 +13,6 @@ The success of the project will be validated through empirical testing tailored 
 1. **Routing Accuracy:** We will design $N$ test prompts, each specifically tailored/suited for a particular child LLM. We will pass these to the Meta-LLM and empirically calculate the success rate of the router selecting the correct target model.
 2. **Information Retention (Splitting):** When the Meta-LLM breaks a parent prompt down into several child prompts, the resulting prompts will be evaluated against the original to ensure zero information loss during the delegation process.
 3. **Refinement Quality:** We will measure the improvement loop by comparing the quality/accuracy of the first meta-response against the final meta-response generated after the Meta-LLM has applied constraints, rules, and adjusted the prompts.
-4. **Consensus Evaluation:** [TBD].
 
 ### System, feature or workflow to be developed/analyzed
 
@@ -22,7 +21,6 @@ We will develop a Meta-LLM orchestration system that features four core workflow
 1. **Intelligent Prompt Routing:** The Meta-LLM receives a user prompt, analyzes it, and determines the single best-suited child LLM to handle it based on weighted factors such as cost-efficiency and expected quality. It then forwards the prompt accordingly.
 2. **Task Delegation & Synthesis (Splitter):** The Meta-LLM takes a complex parent prompt, decomposes it into multiple specialized child prompts, delegates these sub-tasks to the most appropriate child LLMs, and finally synthesizes their outputs into a single, cohesive response.
 3. **Automated Review & Refinement:** The Meta-LLM acts as a quality gatekeeper. It reviews the response from a child LLM, checks it against user constraints, and if necessary, automatically adds rules/constraints to the prompt and re-delegates it until the output meets the required standard.
-4. **Consensus & Comparison:** For high-stakes queries, the Meta-LLM broadcasts the same prompt to multiple child LLMs and compares their responses. It identifies misalignments, executes a defined resolution protocol **[TBD: Define resolution protocol]**, and generates one unified meta-response.
 
 ### How AI assistance contributes to the development process
 
